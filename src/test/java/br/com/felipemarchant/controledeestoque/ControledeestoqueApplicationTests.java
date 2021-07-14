@@ -1,4 +1,4 @@
-package br.com.felipemarchant.demo;
+package br.com.felipemarchant.controledeestoque;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package br.com.felipemarchant.demo;
+package br.com.felipemarchant.controledeestoque;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
