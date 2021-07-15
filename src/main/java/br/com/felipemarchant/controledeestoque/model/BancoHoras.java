@@ -5,6 +5,8 @@ import org.apache.tomcat.jni.Local;
 
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -15,6 +17,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class BancoHoras {
 
     @AllArgsConstructor
@@ -27,6 +30,7 @@ public class BancoHoras {
         private long idUsuario;
     }
 
+    @Id
     @EmbeddedId
     private BancoHorasId id;
     private LocalDateTime dataTrabalhada;
