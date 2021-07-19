@@ -16,7 +16,7 @@ public class JornadaTrabalhoController {
     private JornadaService service;
 
     @PostMapping
-    public JornadaTrabalho createJornada(@RequestBody JornadaTrabalho jornadaTrabalho) {
+    public JornadaTrabalho create(@RequestBody JornadaTrabalho jornadaTrabalho) {
         return service.save(jornadaTrabalho);
     }
 
@@ -31,4 +31,18 @@ public class JornadaTrabalhoController {
         return ResponseEntity.ok(jornada);
     }
 
+    @PutMapping
+    public JornadaTrabalho update(@RequestBody JornadaTrabalho jornadaTrabalho) {
+        return service.save(jornadaTrabalho);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable long id) {
+        try {
+            service.deleteById(id);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return ResponseEntity.ok().build();
+    }
 }
