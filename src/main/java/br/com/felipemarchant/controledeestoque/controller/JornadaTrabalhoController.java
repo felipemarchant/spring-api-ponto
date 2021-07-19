@@ -12,8 +12,12 @@ import java.util.List;
 @RequestMapping("/jornada")
 public class JornadaTrabalhoController {
 
+    private final JornadaService service;
+
     @Autowired
-    private JornadaService service;
+    public JornadaTrabalhoController(JornadaService service) {
+        this.service = service;
+    }
 
     @PostMapping
     public JornadaTrabalho create(@RequestBody JornadaTrabalho jornadaTrabalho) {
