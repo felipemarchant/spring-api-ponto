@@ -26,8 +26,8 @@ public class OcorreciaController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Ocorrencia> show(@PathVariable long id) throws Exception {
-        Ocorrencia categoria = service.findById(id).orElseThrow(() -> new Exception("Ocorrencia não encontrada"));
-        return ResponseEntity.ok(categoria);
+        Ocorrencia ocorrencia = service.findById(id).orElseThrow(() -> new Exception("Ocorrencia não encontrada"));
+        return ResponseEntity.ok(ocorrencia);
     }
 
     @PostMapping
