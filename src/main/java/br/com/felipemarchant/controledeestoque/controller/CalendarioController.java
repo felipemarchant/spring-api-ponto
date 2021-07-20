@@ -28,7 +28,7 @@ public class CalendarioController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Calendario> show(@PathVariable long id) throws Exception {
-        Calendario calendario = service.findById(id).orElseThrow(() -> new Exception("Calendario não encontrada"));
+        Calendario calendario = service.findById(id).orElseThrow(() -> new Exception("Calendario não encontrado"));
         return ResponseEntity.ok(calendario);
     }
 

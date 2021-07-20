@@ -26,7 +26,7 @@ public class NivelAcessoController {
 
     @GetMapping("/{id}")
     public ResponseEntity<NivelAcesso> show(@PathVariable long id) throws Exception {
-        NivelAcesso nivelAcesso = service.findById(id).orElseThrow(() -> new Exception("Nivel de Acesso não encontrada"));
+        NivelAcesso nivelAcesso = service.findById(id).orElseThrow(() -> new Exception("Nivel de Acesso não encontrado"));
         return ResponseEntity.ok(nivelAcesso);
     }
 
