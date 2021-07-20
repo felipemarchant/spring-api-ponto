@@ -1,5 +1,6 @@
 package br.com.felipemarchant.controledeestoque.model;
 
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import lombok.*;
 import org.apache.tomcat.jni.Local;
 
@@ -21,10 +22,12 @@ import java.time.LocalDateTime;
 public class BancoHoras {
 
     @AllArgsConstructor
-    @NoArgsConstructor
     @EqualsAndHashCode
     @Embeddable
-    public class BancoHorasId implements Serializable {
+    @NoArgsConstructor
+    @Getter
+    @Setter
+    public static class BancoHorasId implements Serializable {
         private long idBancoHoras;
         private long idMovimentacao;
         private long idUsuario;
