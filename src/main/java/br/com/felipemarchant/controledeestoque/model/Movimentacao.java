@@ -31,8 +31,8 @@ public class Movimentacao {
     private LocalDateTime dataEntrada;
     private LocalDateTime dataSaida;
     private BigDecimal periodo;
-    @ManyToOne
+    @ManyToOne(cascade = { CascadeType.MERGE })
     private Ocorrencia ocorrencia;
-    @ManyToOne
+    @ManyToOne(cascade = { CascadeType.MERGE })
     private Calendario calendario;
 }
