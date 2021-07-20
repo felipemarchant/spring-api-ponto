@@ -2,10 +2,7 @@ package br.com.felipemarchant.controledeestoque.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -16,8 +13,9 @@ import javax.persistence.OneToMany;
 @Entity
 public class Localidade {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @ManyToOne
+    @ManyToOne(cascade = { CascadeType.MERGE })
     private NivelAcesso nivelAcesso;
     private String descricao;
 }
